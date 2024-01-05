@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Conversor de moedas</title>
+</head>
+
+<body>
+
+
+ 
+
+    <h1>Converter Biticon (BTC) em Real (BRL)</h1>
+    <h3>Veja o valor das principais moedas do mercado, em tempo real. valores diretamente da BINANCE</h3>
+
+    <section>
+
+        <div class="conversor">
+
+
+            <div class="dropdown-cripto">
+
+                <div class="selected-crypto" onclick="toggleDropdown()">
+
+                    <img src="./images/cryptocurrency.png" alt="image-generica-ciptomoedas" class="crypto-icon">
+
+                    <span class="crypto-name">Selecione uma criptomoeda</span>
+
+                    <span class="arrow">▼</span>
+
+                </div>
+
+                <div class="dropdown-content" id="dropdownContent">
+
+                    <div class="search-container">
+                        <input type="text" id="searchInput" onkeyup="filterCryptos()"
+                            placeholder="Pesquisar criptomoeda...">
+                        <span class="search-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                    </div>
+
+                    <div class="crypto-option" onclick="selectCrypto('BTC')">
+
+                        <img src="./images/bitcoin.png" alt="bitcoin" class="crypto-icon">
+                        <span class="crypto-name">Bitcoin (BTC)</span>
+
+                    </div>
+
+                    <div class="crypto-option" onclick="selectCrypto('ETH')">
+
+                        <img src="./images/ethereum.png" alt="ethereum" class="crypto-icon">
+                        <span class="crypto-name">Ethereum (ETH)</span>
+
+                    </div>
+
+                    <!-- Adicione outras criptomoedas aqui -->
+
+                    <div class="crypto-option" onclick="selectCrypto('LTC')">
+
+                        <img src="./images/litecoin.png" alt="litecoin" class="crypto-icon">
+                        <span class="crypto-name">Litecoin (LTC)</span>
+
+                    </div>
+
+                    <div class="crypto-option" onclick="selectCrypto('DOGE')">
+
+                        <img src="./images/dogecoin.png" alt="dogecoin" class="crypto-icon">
+                        <span class="crypto-name">Dogecoin (DOGE)</span>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+            <div class="valor-converter">
+
+                <input type="text" value="1" class="valor" id="value-crypto" maxlength="15">
+
+            </div>
+
+            <i class="fa-solid fa-rotate rotate"></i>
+
+            <div class="dropdown-cripto">
+
+                <div class="selected-crypto" onclick="toggleDropdown()">
+
+                    <img src="./images/dollar.png" alt="image-generica-ciptomoedas" class="crypto-icon">
+
+                    <span class="crypto-name">Real</span>
+
+                    <span class="arrow">▼</span>
+
+                </div>
+
+                <div class="dropdown-content" id="dropdownContent">
+
+                    <div class="search-container">
+                        <input type="text" id="searchInput" onkeyup="filterCryptos()"
+                            placeholder="Pesquisar criptomoeda...">
+                        <span class="search-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                    </div>
+
+                    <div class="crypto-option" onclick="selectCrypto('BTC')">
+
+                        <img src="./images/bitcoin.png" alt="bitcoin" class="crypto-icon">
+                        <span class="crypto-name">Bitcoin (BTC)</span>
+
+                    </div>
+
+                    <div class="crypto-option" onclick="selectCrypto('ETH')">
+
+                        <img src="./images/ethereum.png" alt="ethereum" class="crypto-icon">
+                        <span class="crypto-name">Ethereum (ETH)</span>
+
+                    </div>
+
+                    <!-- Adicione outras criptomoedas aqui -->
+
+                    <div class="crypto-option" onclick="selectCrypto('LTC')">
+
+                        <img src="./images/litecoin.png" alt="litecoin" class="crypto-icon">
+                        <span class="crypto-name">Litecoin (LTC)</span>
+
+                    </div>
+
+                    <div class="crypto-option" onclick="selectCrypto('DOGE')">
+
+                        <img src="./images/dogecoin.png" alt="dogecoin" class="crypto-icon">
+                        <span class="crypto-name">Dogecoin (DOGE)</span>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <div class="valor-converter">
+
+                <input type="text" class="valor" id="value-money" maxlength="15" >
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="./drop-cripto.js" ></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
